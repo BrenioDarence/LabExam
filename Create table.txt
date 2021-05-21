@@ -1,0 +1,36 @@
+CREATE TABLE Employees
+(
+empID number(10),
+empname varchar2(20),
+empdob date,
+empsalary number(10),
+empplace varchar2(20)
+)
+
+
+DESC Employees
+SELECT * FROM user_tables
+SELECT * FROM Employees
+DROP TABLE Employees
+
+
+
+insert into Salary values(1001,'System Management',15000)
+insert into Salary (EmployeeID,Department) values(1010,'Sales Management')
+
+
+select
+EmployeeID,
+Department,
+Salary
+from Salary
+
+
+select
+e.EmployeeID,
+e.EmployeeName,
+e.MGR_ID,
+s.Department,
+s.Salary
+from Employees e
+JOIN Salary s ON e.EmployeeID = s.EmployeeID
